@@ -273,7 +273,8 @@ void tpm_comm_destroy(TPM_COMM_HANDLE handle)
 TPM_COMM_TYPE tpm_comm_get_type(TPM_COMM_HANDLE handle)
 {
     (void)handle;
-    return TPM_COMM_TYPE_EMULATOR;
+    //return TPM_COMM_TYPE_EMULATOR;
+    return TPM_COMM_TYPE_ENUM_PASSTHROUGH;
 }
 
 int tpm_comm_submit_command(TPM_COMM_HANDLE handle, const unsigned char* cmd_bytes, uint32_t bytes_len, unsigned char* response, uint32_t* resp_len)
